@@ -89,6 +89,22 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         public void remove() {
             throw new UnsupportedOperationException();
         }
+        
+         public static void main(String[] args) {
+        RandomizedQueue<Integer> queue = new RandomizedQueue<>();
+        for (int i = 0; i < 10; i++) {
+            queue.enqueue(i);
+        }
+        System.out.println(queue.size());
+        for (Integer i : queue) {
+            System.out.println(i);
+        }
+        System.out.println("sample:" + queue.sample());
+        System.out.println("dequeue");
+        while (!queue.isEmpty()) System.out.println(queue.dequeue());
+        System.out.println(queue.size());
+    }
+
 
     }
 }
